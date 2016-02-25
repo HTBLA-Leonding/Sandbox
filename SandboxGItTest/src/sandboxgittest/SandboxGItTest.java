@@ -10,6 +10,8 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
@@ -21,22 +23,25 @@ public class SandboxGItTest extends Application {
     
     @Override
     public void start(Stage primaryStage) {
+        Label l = new Label(".");
         Button btn = new Button();
-        btn.setText("Say 'Hello World'");
+        btn.setText("This is a Button");
+        
+        
         btn.setOnAction(new EventHandler<ActionEvent>() {
             
             @Override
             public void handle(ActionEvent event) {
-                System.out.println("Hello World!");
+                l.setText("IT IS WORKING");
             }
         });
         
-        StackPane root = new StackPane();
-        root.getChildren().add(btn);
-        
+        BorderPane root = new BorderPane();
+        root.setTop(btn);
+        root.setCenter(l);
         Scene scene = new Scene(root, 300, 250);
         
-        primaryStage.setTitle("Hello World!");
+        primaryStage.setTitle("Epic Big Program");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
