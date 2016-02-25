@@ -14,7 +14,7 @@ import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 /**
- * This is awesome
+ * This is awesome!
  * @author Matthias
  */
 public class SandboxGItTest extends Application {
