@@ -3,45 +3,40 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package sandboxgittest;
+package nadinsprojekt;
 
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 /**
- * This is awesome!
- * @author Matthias
+ *
+ * @author Nadin
  */
-public class SandboxGItTest extends Application {
+public class NadinsProjekt extends Application {
     
     @Override
     public void start(Stage primaryStage) {
-        Label l = new Label(".");
         Button btn = new Button();
-        btn.setText("This is a Button");
-        
-        
+        btn.setText("Say 'Hello World'");
         btn.setOnAction(new EventHandler<ActionEvent>() {
             
             @Override
             public void handle(ActionEvent event) {
-                l.setText("IT IS WORKING");
+                System.out.println("Hello World!");
             }
         });
         
-        BorderPane root = new BorderPane();
-        root.setTop(btn);
-        root.setCenter(l);
+        StackPane root = new StackPane();
+        root.getChildren().add(btn);
+        
         Scene scene = new Scene(root, 300, 250);
         
-        primaryStage.setTitle("Epic Big Program");
+        primaryStage.setTitle("Hello World!");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
